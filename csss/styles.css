@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    height: 50px;
+    background-color: #3498db;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: #f32a2a;
+    font-size: 1rem;
+    height: 50px;
+    left: 10px;
+    position: absolute;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin-right: 20px;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .header {
+    position: relative;
+    height: 0px;
+    background-color: #2ecc71;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    padding: 5px;
+    text-align: center;
+  }
+  
+ 
+
+/*     width: 50%;
+    left: 50%;
+    transform: translateX(45%);*/
+
+
+    
+.section-navigation {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.section-navigation button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+.section-navigation {
+  position: fixed;
+  bottom: 5px;
+  left: 1px; /* تم تعديل القيمة لتكون على اليسار */
+  transform: none; /* تم إلغاء التحول لتجنب أي تأثير آخر */
+  display: flex;
+  flex-direction: column; /* تجعل العناصر تظهر عمودياً على الهواتف */
+}
+
+
+@media (min-width: 768px) {
+  .section-navigation {
+    flex-direction: row;
+    left: 50%; /* تعيين اليسار مرة أخرى إلى 50% */
+    transform: translateX(-50%); /* إعادة تحويل للتأكد من الوسط */
+  }
+}

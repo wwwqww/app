@@ -1,0 +1,679 @@
+/* قواعد CSS العامة للصفحة */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d6d6d6;
+}
+
+/* قواعد CSS للشاشات الصغيرة (أجهزة محمولة) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  /* أضف المزيد من القواعد هنا لتخصيص شاشات الهواتف المحمولة */
+}
+
+/* قواعد CSS للشاشات المتوسطة (أجهزة لوحية) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+  /* أضف المزيد من القواعد هنا لتخصيص شاشات الأجهزة اللوحية */
+}
+
+/* قواعد CSS للشاشات الكبيرة (أجهزة سطح المكتب) */
+@media screen and (min-width: 100%) {
+  body {
+    font-size: 18px;
+  }
+  /* أضف المزيد من القواعد هنا لتخصيص شاشات أجهزة سطح المكتب */
+}
+.header {
+  height: 10%; /* العنصر سيكون بارتفاع يعادل 10% من ارتفاع نافذة المشاهدة */
+}
+
+.content {
+  height: 100%; /* العنصر سيكون بارتفاع يعادل 80% من ارتفاع نافذة المشاهدة */
+}
+
+.footer {
+  height: 30vh; /* العنصر سيكون بارتفاع يعادل 10% من ارتفاع نافذة المشاهدة */
+
+}
+
+        /* تصميم القسم السفلي (footer) */
+        footer {
+            background-color: #ff0000; /* لون الخلفية الرمادي */
+            color: rgb(0, 0, 0); /* لون النص الجميل (زرقة) */
+            padding: 20px; /* هوامش داخلية للقسم السفلي */
+            text-align: center; /* محاذاة النص في الوسط */
+        }
+
+        /* تصميم العناصر النصية داخل القسم السفلي */
+        footer p {
+            font-size: 20px; /* حجم الخط */
+        }
+
+        footer ul {
+            list-style: none; /* إزالة نقاط الترقيم في القائمة */
+        }
+
+        footer li {
+            margin: 5px 0; /* هوامش بين عناصر القائمة */
+        }
+
+
+html, body {
+  height: 100%; /* ارتفاع الصفحة بوحدة البكسل */
+}
+
+
+/* media*/
+/* لعرض <main> على الحواسيب وإخفاء <menu> */
+@media (min-width: 768px) {
+  main {
+      display: block;
+  }
+
+  .menu {
+      display: none;
+  }
+}
+
+/* لعرض <menu> على الهواتف وإخفاء <main> */
+@media (max-width: 767px) 
+{
+  main {
+      display: none;
+  }
+
+  .menu {
+      display: block;
+  }
+}
+  /* قومي بتحديد أسلوب التصميم للهواتف هنا */
+/* قومي بتحديد أسلوب التصميم للهواتف هنا */
+@media (max-width: 767px) {
+  /* أي تعديلات ترغبين في تطبيقها على البطاقات عندما يكون عرض الشاشة صغير */
+  .card {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px; /* هامش بين البطاقات */
+    width: 205px; /* تحكم بعرض البطاقة هنا */
+    height: 240px; /* تحكم بارتفاع البطاقة هنا */
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-radius: 15px;
+    /* إضافة أي خصائص CSS لتخصيص تصميم البطاقة في الهواتف */
+    /* على سبيل المثال، تحديد العرض أو التباعد بين البطاقات بشكل مختلف */
+  }
+
+  .card:hover {
+    transform: translateY(-5px); /* تحريك البطاقة عند تمرير الماوس فوقها */
+  }
+  
+  .card img {
+    width: 105%; /* تعديل العرض ليمتد من بداية البطاقة */
+    height: 90%; /* تعديل الارتفاع ليمتد من بداية البطاقة */
+    object-fit: fill; /* استخدم "fill" بدلاً من "cover" */
+    object-position: left top; /* ضع الصورة في الزاوية اليسرى العلوية */
+    border-radius: 15px;
+  }
+  
+  .card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    margin: 10px;
+    font-size: 40px; /* تحكم بحجم النص هنا */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* قومي بتحديد أسلوب التصميم للحواسيب هنا */
+@media (min-width: 768px) {
+  /* أي تعديلات ترغبين في تطبيقها على البطاقات عندما يكون عرض الشاشة كبير */
+  .card {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px; /* هامش بين البطاقات */
+    width: 365px; /* تحكم بعرض البطاقة هنا */
+    height: 400px; /* تحكم بارتفاع البطاقة هنا */
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-radius: 15px;
+    /* إضافة أي خصائص CSS لتخصيص تصميم البطاقة على الحواسيب */
+    /* على سبيل المثال، تحديد العرض أو التباعد بين البطاقات بشكل مختلف */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* تحريك البطاقة عند تمرير الماوس فوقها */
+  }
+  
+  .card img {
+    width: 300px; /* تعديل العرض ليمتد من بداية البطاقة */
+    height: 90%; /* تعديل الارتفاع ليمتد من بداية البطاقة */
+    object-fit: fill; /* استخدم "fill" بدلاً من "cover" */
+    object-position: left top; /* ضع الصورة في الزاوية اليسرى العلوية */
+    border-radius: 15px;
+  }
+  
+  .card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 10px;
+    font-size: 32px; /* تحكم بحجم النص هنا */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
+
+.popup-content {
+  display: none;
+  position: absolute;
+  top: 0; /* يظهر فوق البطاقة */
+  left: 0;
+  transform: translateX(0);
+  width: 100%; /* تحكم بعرض النافذة هنا */
+  height: 100%; /* تحكم بارتفاع النافذة هنا */
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #cf9898; /* يمكنك تغيير لون الخلفية حسب احتياجك */
+}
+
+.card:hover .popup-content {
+  display: block;
+}
+.search {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #522cad;
+    padding: 1px;
+    border-radius: 6px;
+    border: 1px solid #4d9b20;
+
+}
+.search :is(input, button){
+    background: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+}
+.searchinput{
+    width: 0;
+    transition: width 0.5s;
+
+}
+.searchbutton {
+    display: grid;
+    place-items: center;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: color 0.25s;
+
+}
+
+.search :focus-within{
+    width: 100px;
+
+}
+/* Light blue color */
+body {
+    background-color: #ADD8E6;
+    
+    /* Light gray color */
+    background-color: #F5F5F5;
+    
+    /* Beige color */
+    background-color: #F5DEB3;
+    
+    /* Purple color */
+    background-color: #9370DB;
+    
+    /* Red color */
+    background-color: #FF0000;
+    
+    /* Orange color */
+    background-color: #FFA500;
+    
+    /* Green color */
+    background-color: #008000;
+    
+    /* Yellow color */
+    background-color: #FFFF00;
+    
+    /* Pink color */
+    background-color: #FFC0CB;
+    
+    /* Brown color */
+    background-color: #A52A2A;
+      }
+      /*hiho*/
+      /* Defining the main fonts and colors for the website */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #F5F5F5;
+    }
+    
+    /* Button design */
+    .button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 4px;
+    }
+    
+    /* Input field design */
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    }
+    
+    /* Defining the general framework for the website */
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    }
+    
+    /* Main navigation menu design */
+    .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    }
+    
+    /* Defining the style for navigation menu items */
+    .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    }
+    
+    .nav ul li {
+    margin-left: 16px;
+    }
+    
+    .nav ul li:first-child {
+    margin-left: 0;
+    }
+    
+    .nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    }
+    
+    /* Sub-navigation menu design */
+    .sub-nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: #ffffff;
+    width: 200px;
+    border: 1px solid #cccccc;
+    z-index: 1;
+    }
+    
+    .sub-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .sub-nav ul li {
+    margin: 0;
+    border-bottom: 1px solid #cccccc;
+    }
+    
+    .sub-nav ul li:last-child {
+    border-bottom: none;
+    }
+    
+    .sub-nav ul li a {
+    display: block;
+    padding: 8px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    }
+    
+    .sub-nav ul li a:hover {
+    background-color: #f5f5f5;
+    }
+    
+    /* Defining the hover state for buttons and navigation menu items */
+    .button:hover,
+    .nav ul li a:hover,
+    .sub-nav ul li a:hover {
+    cursor: pointer;
+    }
+    
+    /* Defining the style for controlling elements when the screen is resized */
+    @media (max-width: 768px) {
+    .nav {
+    justify-content: center;
+    }
+    
+    .nav ul {
+    display: none;
+    }
+    
+    .sub-nav {
+    display: block;
+    }
+    }
+/* أنماط الصورة الشرائحية */
+.image-container {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.slideshow-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 10%;
+  transform: translateY(5px); /* هبوط الصورة بمقدار 10 بكسل */
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgb(158, 56, 56);
+  
+}
+
+.image-count.active {
+  background: linear-gradient(90deg, red, yellow);
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin: 40px 1px;
+  left: auto;
+  top: auto;
+}
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+ 
+  
+  .slideshow-image {
+    width: 90%;
+    max-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .slideshow-image.active {
+    opacity: 1;
+  }
+  
+ 
+  .nav-buttons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 400px;
+  }
+  
+  .nav-button {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.6s ease;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .nav-button:hover {
+    background:linear-gradient(90deg, red, rgb(192, 192, 127));
+    color: white;
+  }
+  
+  .image-count {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 9px;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  
+  .image-count.active {
+    background: linear-gradient(90deg, red, rgb(192, 192, 127));
+  }
+  .searchinput i {
+    font-size: 45px; /* حجم الأيقونة الجديد بالبكسل */
+}
+/* تنسيق الحاوية الخارجية للكود */
+.main {
+    text-align: center;
+}
+
+/* تنسيق الحاوية الداخلية (المستطيل) */
+.code-rectangle {
+    background-color: #c04a4a;
+    border-radius: 4px;
+    height: 40px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+/*
+    width: 50%;
+    left: 50%;
+    transform: translateX(45%);
+*/
+
+
+  
+}
+
+/* تنسيق حقول الإدخال والزر */
+.searchinput {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* تنسيق الروابط */
+a {
+    text-decoration: none;
+    color: #000000;
+    margin: 10px;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #007bff;
+}
+/* أنماط الزر */
+.menu-button {
+    background-color: #4CAF50;
+    color: rgb(216, 83, 83);
+    padding: 0.5px 0.5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  
+  .menu-icon {
+    margin-left: 0;
+    font-size: 24px;
+  }
+  
+  /* أنماط القائمة المنبثقة */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0%;
+    right: 0px;
+    width: 300px;
+    height: 400px;
+    font-size: 30px;
+    padding: 5px;
+    background-size: cover;
+    background-image: url('imag/Untitled12ki9.png');
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(255, 0, 0, 0.1);
+    z-index: 0;
+  }
+  
+  .menu:hover .popup {
+    display: block;
+  }
+  
+  .popup a {
+    display: block;
+    margin: 1px 0;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .popup a:hover {
+    color: rgb(190, 81, 125);
+  }
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1;
+    min-width: 200px; /* عرض النافذة المنبثقة */
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* عرض النافذة المنبثقة عند تمرير المؤشر فوق .dropdown-container */
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+/* تخصيص القائمة الأفقية داخل النافذة المنبثقة */
+.horizontal-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-menu li {
+    margin: 0;
+} .dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1;
+    min-width: 200px; /* عرض النافذة المنبثقة */
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* عرض النافذة المنبثقة عند تمرير المؤشر فوق .dropdown-container */
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+/* تخصيص القائمة الأفقية داخل النافذة المنبثقة */
+.horizontal-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-menu li {
+    margin: 0;
+}
+
+
